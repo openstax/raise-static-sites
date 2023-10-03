@@ -134,6 +134,14 @@ nav a:hover {
 /* Any UIKit class names should remain as-is because UIKit javascript references these class names to make various
    elements interactive.*/
 
+.static-nav {
+  flex: 0 0 auto;
+  overflow-y: auto;
+  width: 400px;
+  padding: 2rem 2rem 0 1rem;
+  background-color: #f8f9fa;
+}
+
 .drawer {
   position: fixed;
   top: calc(60px + 0.7rem);
