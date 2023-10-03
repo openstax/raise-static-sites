@@ -130,7 +130,7 @@ nav a:hover {
   margin: auto;
 }
 
-/* Drawer / TOC Styles */
+/* START: Drawer / TOC Styles */
 /* Any UIKit class names should remain as-is because UIKit javascript references these class names to make various
    elements interactive.*/
 
@@ -219,7 +219,7 @@ nav a:hover {
   }
 
   .uk-icon polyline {
-    stroke: #fff;
+    stroke: #ffffff;
   }
 }
 
@@ -228,6 +228,8 @@ nav a:hover {
     display: none
   }
 }
+
+/* END: Drawer / TOC Styles */
 
 footer {
   background-color: black;
