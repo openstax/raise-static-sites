@@ -137,7 +137,7 @@ nav a:hover {
 .static-nav {
   flex: 0 0 auto;
   overflow-y: auto;
-  width: 400px;
+  width: 25rem;
   padding: 2rem 2rem 0 1rem;
   background-color: #f8f9fa;
 }
@@ -159,7 +159,7 @@ nav a:hover {
 
 .drawer button:hover {
   border: 1px solid transparent;
-  padding-left:  .625rem;
+  padding-left: .625rem;
   background-color: #dee2e6;
 }
 
