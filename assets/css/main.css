@@ -184,7 +184,7 @@ nav a:hover {
   transition: opacity .15s linear;
 }
 
-.offcanvas-bar {
+.uk-offcanvas-bar {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -195,11 +195,11 @@ nav a:hover {
   overflow-y: auto;
 }
 
-.offcanvas-bar-animation {
+.uk-offcanvas-bar-animation {
   transition: left .5s ease-out;
 }
 
-.uk-open > .offcanvas-bar {
+.uk-open > .uk-offcanvas-bar {
   left: 0
 }
 

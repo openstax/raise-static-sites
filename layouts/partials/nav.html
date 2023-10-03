@@ -6,7 +6,7 @@
   <button uk-toggle="target: #offcanvas-nav"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></button>
 </div>
 <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-  <nav class="offcanvas-bar">
+  <nav class="uk-offcanvas-bar">
     <button class="uk-offcanvas-close close-button" type="button" uk-close></button>
     <ul uk-accordion>
       {{- range index .Site.Data $contenttype $edition "toc" -}}
