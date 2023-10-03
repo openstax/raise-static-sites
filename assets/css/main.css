@@ -11,6 +11,11 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
+  /* display - flex-direction are not part of Moodle and were added in order to create a sticky footer and 
+     remove hardcoding height for various elements */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1 {
@@ -70,7 +75,6 @@ blockquote {
 header {
   width: 100%;
   padding: 0 1rem 0 1rem;
-  height: var(--header-height);
   position: fixed;
   top: 0;
   background-color: #ffffff;
@@ -85,15 +89,7 @@ header img {
 .page {
   margin-top: var(--header-height);
   display: flex;
-  height: calc(100vh - var(--header-height) - var(--footer-height));
-}
-
-nav {
-  flex: 0 0 auto;
-  overflow-y: auto;
-  width: 400px;
-  padding: 2rem 2rem 0 1rem;
-  background-color: #f8f9fa;
+  flex: 1;
 }
 
 nav li.uk-open > a .uk-nav-parent-icon {
@@ -129,9 +125,108 @@ nav a:hover {
 }
 
 .content {
-  max-width: 800px;
+  max-width: 50rem;
   padding: 2rem;
   margin: auto;
+}
+
+/* Drawer / TOC Styles */
+/* Any UIKit class names should remain as-is because UIKit javascript references these class names to make various
+   elements interactive.*/
+
+.drawer {
+  position: fixed;
+  top: calc(60px + 0.7rem);
+  z-index: 2;
+}
+
+.drawer button {
+  background-color: #dee2e6;
+  padding: .625rem .5rem .625rem .25rem;
+  border: 1px solid transparent;
+  border-radius: 0 12.5rem 12.5rem 0;
+  transition: padding 200ms;
+  cursor: pointer;
+}
+
+.drawer button:hover {
+  border: 1px solid transparent;
+  padding-left:  .625rem;
+  background-color: #dee2e6;
+}
+
+.uk-offcanvas-overlay {
+  width: 100vw;
+}
+
+.uk-offcanvas {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.uk-offcanvas-overlay.uk-open::before {
+  opacity: 1;
+}
+
+.uk-offcanvas-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0000001a;
+  opacity: 0;
+  transition: opacity .15s linear;
+}
+
+.offcanvas-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -31.25rem;
+  width: 25rem;
+  padding: 1.25rem 1.25rem;
+  background: #222;
+  overflow-y: auto;
+}
+
+.offcanvas-bar-animation {
+  transition: left .5s ease-out;
+}
+
+.uk-open > .offcanvas-bar {
+  left: 0
+}
+
+.close-button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.close-button line {
+  stroke: #ffffff;
+}
+
+@media (max-width: 1599px) {
+  .uk-visible\@xl {
+    display: none
+  }
+
+  .uk-icon polyline {
+    stroke: #fff;
+  }
+}
+
+@media (min-width: 1600px) {
+  .uk-hidden\@xl {
+    display: none
+  }
 }
 
 footer {
@@ -140,9 +235,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: var(--footer-height);
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
 }
 
 footer a {

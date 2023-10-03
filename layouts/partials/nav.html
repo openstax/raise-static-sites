@@ -1,7 +1,10 @@
 {{- $edition := printf "%s" .Section -}}
 {{- $contenttype := hugo.Environment -}}
 {{- if index .Site.Data $contenttype $edition "toc" -}}
-<nav>
+<div class="drawer uk-hidden@xl" tabindex="0">
+  <button uk-toggle="target: #offcanvas-nav"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></button>
+</div>
+<nav class="uk-visible@xl">
   <ul uk-accordion>
     {{- range index .Site.Data $contenttype $edition "toc" -}}
     <li>
@@ -32,4 +35,38 @@
     {{- end -}}
   </ul>
 </nav>
-{{- end -}}
+<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <nav class="offcanvas-bar">
+      <button class="uk-offcanvas-close close-button" type="button" uk-close></button>
+      <ul uk-accordion>
+        {{- range index .Site.Data $contenttype $edition "toc" -}}
+        <li>
+          <a class="uk-accordion-title" href="#">{{ .title }} <span uk-nav-parent-icon></span></a>
+          <ul uk-accordion class="uk-accordion-content">
+            {{- range .items -}}
+            {{- if .items -}}
+            <li>
+              <a class="uk-accordion-title" href="#">{{ .title }} <span uk-nav-parent-icon></span></a>
+              <ul uk-accordion class="uk-accordion-content">
+                {{- range .items -}}
+                <li class="{{ if eq $.Slug .slug }}active{{ end }}">
+                  {{- $url := printf "/%s/%s" $.Section .slug -}}
+                  <a class="uk-accordion-title uk-accordion-link" href="{{ $url }}">{{ .title }}</a>
+                </li>
+                {{- end -}}
+              </ul>
+            </li>
+            {{- else -}}
+            <li class="{{ if eq $.Slug .slug }}active{{ end }}">
+              {{- $url := printf "/%s/%s" $.Section .slug -}}
+              <a class="uk-accordion-title uk-accordion-link" href="{{ $url }}">{{ .title }}</a>
+            </li>
+            {{- end -}}
+            {{- end -}}
+          </ul>
+        </li>
+        {{- end -}}
+      </ul>
+    </nav>
+    {{- end -}}
+</div>
