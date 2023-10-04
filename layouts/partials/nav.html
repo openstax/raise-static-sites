@@ -9,8 +9,8 @@
     </svg>
   </button>
 </div>
-<div id="offcanvas-nav" class="static-nav" uk-offcanvas="overlay: true">
-  <nav class="uk-offcanvas-bar">
+<nav id="offcanvas-nav" class="static-nav" uk-offcanvas="overlay: true">
+  <div class="uk-offcanvas-bar">
     <button class="uk-offcanvas-close close-button" type="button" uk-close></button>
     <ul uk-accordion>
       {{- range index .Site.Data $contenttype $edition "toc" -}}
@@ -41,6 +41,6 @@
       </li>
       {{- end -}}
     </ul>
-  </nav>
-  {{- end -}}
-</div>
+  </div>
+</nav>
+{{- end -}}
