@@ -1,6 +1,5 @@
 :root {
   --header-height: 60px;
-  --footer-height: 80px;
 }
 
 /* START: Moodle theme styling ported for consistency */
@@ -131,16 +130,8 @@ nav a:hover {
 }
 
 /* START: Drawer / TOC Styles */
-/* Any UIKit class names should remain as-is because UIKit javascript references these class names to make various
+/* Any UIKit class names (prefixed with "uk") should remain as-is because UIKit javascript references these class names to make various
    elements interactive.*/
-
-.static-nav {
-  flex: 0 0 auto;
-  overflow-y: auto;
-  width: 25rem;
-  padding: 2rem 2rem 0 1rem;
-  background-color: #f8f9fa;
-}
 
 .drawer {
   position: fixed;
@@ -163,54 +154,6 @@ nav a:hover {
   background-color: #dee2e6;
 }
 
-.uk-offcanvas-overlay {
-  width: 100vw;
-}
-
-.uk-offcanvas {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.uk-offcanvas-overlay.uk-open::before {
-  opacity: 1;
-}
-
-.uk-offcanvas-overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #0000001a;
-  opacity: 0;
-  transition: opacity .15s linear;
-}
-
-.uk-offcanvas-bar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -31.25rem;
-  width: 25rem;
-  padding: 1.25rem 1.25rem;
-  background: #222;
-  overflow-y: auto;
-}
-
-.uk-offcanvas-bar-animation {
-  transition: left .5s ease-out;
-}
-
-.uk-open > .uk-offcanvas-bar {
-  left: 0
-}
-
 .close-button {
   background-color: transparent;
   border: 1px solid transparent;
@@ -229,11 +172,71 @@ nav a:hover {
   .uk-icon polyline {
     stroke: #ffffff;
   }
+
+  .uk-offcanvas-overlay {
+    width: 100vw;
+  }
+
+  .uk-offcanvas {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+  
+  .uk-offcanvas-overlay.uk-open::before {
+    opacity: 1;
+  }
+  
+  .uk-offcanvas-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0000001a;
+    opacity: 0;
+    transition: opacity .15s linear;
+  }
+  
+  .uk-offcanvas-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -31.25rem;
+    width: 25rem;
+    padding: 1.25rem 1.25rem;
+    background: #222;
+    overflow-y: auto;
+  }
+  
+  .uk-offcanvas-bar-animation {
+    transition: left .5s ease-out;
+  }
+  
+  .uk-open > .uk-offcanvas-bar {
+    left: 0
+  }
 }
 
 @media (min-width: 1600px) {
   .uk-hidden\@xl {
     display: none
+  }
+
+  .close-button {
+    display: none;
+  }
+
+  .static-nav {
+    flex: 0 0 auto;
+    overflow-y: auto;
+    width: 25rem;
+    padding: 2rem 2rem 0 1rem;
+    background-color: #f8f9fa;
   }
 }
 
@@ -260,3 +263,107 @@ footer a:hover {
 footer p {
   margin: 0;
 }
+
+/* START: Drawer / TOC Styles */
+/* Any UIKit class names should remain as-is because UIKit javascript references these class names to make various
+   elements interactive.*/
+
+   /* .drawer {
+    position: fixed;
+    top: calc(60px + 0.7rem);
+    z-index: 2;
+  }
+  
+  .drawer button {
+    background-color: #dee2e6;
+    padding: .625rem .5rem .625rem .25rem;
+    border: 1px solid transparent;
+    border-radius: 0 12.5rem 12.5rem 0;
+    transition: padding 200ms;
+    cursor: pointer;
+  }
+  
+  .drawer button:hover {
+    border: 1px solid transparent;
+    padding-left: .625rem;
+    background-color: #dee2e6;
+  }
+  
+  .close-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .close-button line {
+    stroke: #ffffff;
+  }
+  
+  @media (max-width: 1599px) {
+    .uk-visible\@xl {
+      display: none
+    }
+  
+    .uk-icon polyline {
+      stroke: #ffffff;
+    }
+  
+    .uk-offcanvas-overlay {
+      width: 100vw;
+    }
+    
+    .uk-offcanvas-overlay.uk-open::before {
+      opacity: 1;
+    }
+    
+    .uk-offcanvas-overlay::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0000001a;
+      opacity: 0;
+      transition: opacity .15s linear;
+    }
+    
+    .uk-offcanvas-bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -31.25rem;
+      width: 25rem;
+      padding: 1.25rem 1.25rem;
+      background: #222;
+      overflow-y: auto;
+    }
+    
+    .uk-offcanvas-bar-animation {
+      transition: left .5s ease-out;
+    }
+    
+    .uk-open > .uk-offcanvas-bar {
+      left: 0
+    }
+  }
+  
+  @media (min-width: 1600px) {
+    .uk-hidden\@xl {
+      display: none
+    }
+  
+    .close-button {
+      display: none;
+    }
+  
+    .static-nav {
+      flex: 0 0 auto;
+      overflow-y: auto;
+      width: 25rem;
+      padding: 2rem 2rem 0 1rem;
+      background-color: #f8f9fa;
+    }
+  } */
+  
+  /* END: Drawer / TOC Styles */
