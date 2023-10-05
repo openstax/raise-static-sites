@@ -2,6 +2,10 @@
   --header-height: 60px;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 /* START: Moodle theme styling ported for consistency */
 
 body {
@@ -10,11 +14,6 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-  /* display - flex-direction are not part of Moodle and were added in order to create a sticky footer and 
-     remove hardcoding height for various elements */
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
 h1 {
@@ -88,7 +87,6 @@ header img {
 .page {
   margin-top: var(--header-height);
   display: flex;
-  flex: 1;
 }
 
 nav li.uk-open > a .uk-nav-parent-icon {
@@ -237,10 +235,6 @@ nav a:hover {
     width: 25rem;
     padding: 2rem 2rem 0 1rem;
     background-color: #f8f9fa;
-    align-self: start;
-    position: sticky;
-    top: 2rem;
-    height: 100vh;
   }
 }
 /* END: Drawer / TOC Styles */
@@ -252,6 +246,9 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {
