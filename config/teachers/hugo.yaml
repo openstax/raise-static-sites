@@ -1,3 +1,9 @@
 ---
   baseURL: "https://teachers.raiselearning.org/"
   contentDir: "content/teachers"
+  disableKinds:
+  - taxonomy
+  - term
+  - RSS
+  - sitemap
+  - home

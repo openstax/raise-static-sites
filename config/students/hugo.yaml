@@ -1,3 +1,10 @@
 ---
   baseURL: "https://students.raiselearning.org/"
   contentDir: "content/students"
+  disableKinds:
+  - taxonomy
+  - term
+  - RSS
+  - sitemap
+  - section
+  - home

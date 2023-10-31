@@ -1,12 +1,5 @@
 ---
   languageCode: "en"
   title: "RAISE"
-  disableKinds:
-  - taxonomy
-  - term
-  - RSS
-  - sitemap
-  - section
-  - home
   minify:
     minifyOutput: true

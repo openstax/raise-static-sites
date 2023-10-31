@@ -263,3 +263,14 @@ footer a:hover {
 footer p {
   margin: 0;
 }
+
+/* START: Landing Page Styles */
+.landing-page-button {
+  background-color: #DC582A;
+  border: 1px solid #853500;
+  border-radius: 12px;
+  padding: .55rem 1.55rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+/* END: Landing Page Styles */
