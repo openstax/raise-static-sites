@@ -1,5 +1,6 @@
 ---
   languageCode: "en"
   title: "RAISE"
+  enableRobotsTXT: true
   minify:
     minifyOutput: true
