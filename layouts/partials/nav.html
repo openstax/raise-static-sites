@@ -15,12 +15,12 @@
     <ul uk-accordion>
       {{- range index .Site.Data $contenttype $edition "toc" -}}
       <li>
-        <a class="uk-accordion-title" href="#">{{ .title }} <span uk-nav-parent-icon></span></a>
+        <a class="uk-accordion-title" href="#"> <span uk-nav-parent-icon></span> {{ .title }} </a>
         <ul uk-accordion class="uk-accordion-content">
           {{- range .items -}}
           {{- if .items -}}
           <li>
-            <a class="uk-accordion-title" href="#">{{ .title }} <span uk-nav-parent-icon></span></a>
+            <a class="uk-accordion-title" href="#"> <span uk-nav-parent-icon></span> {{ .title }} </a>
             <ul uk-accordion class="uk-accordion-content">
               {{- range .items -}}
               <li class="{{ if eq $.Slug .slug }}active{{ end }}">

@@ -72,6 +72,9 @@ blockquote {
 /* END: Moodle theme styling ported for consistency */
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 0 1rem 0 1rem;
   position: fixed;
@@ -82,7 +85,8 @@ header {
 }
 
 header img {
-  height: var(--header-height);
+  height: calc(var(--header-height) * 0.7);
+  margin: 0.3rem;
 }
 
 .page {
@@ -96,6 +100,7 @@ nav li.uk-open > a .uk-nav-parent-icon {
 }
 
 nav .active {
+  color: #005047;
   font-weight: 700;
 }
 
@@ -109,6 +114,7 @@ nav li {
 }
 
 nav a {
+  color: #424242;
   text-decoration: none;
 }
 
@@ -157,6 +163,7 @@ nav a:hover {
   background-color: transparent;
   border: 1px solid transparent;
   cursor: pointer;
+  
 }
 
 .close-button line {
@@ -270,4 +277,29 @@ footer p {
   cursor: pointer;
   color: #ffffff;
 }
+.student-link-button {
+  border-radius: 5px;
+  background-color: #0A5B50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  color: #FDBD3E;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  padding: .5rem;
+  height: 40px;
+}
+.student-link-button:hover {
+  text-decoration: none;
+  color: #FDBD3E;
+}
+
+.student-link-button img {
+  width: 24px;
+  height: 24px;
+}
+
+
 /* END: Landing Page Styles */
