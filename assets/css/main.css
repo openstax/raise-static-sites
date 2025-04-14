@@ -88,9 +88,11 @@ header img {
   height: calc(var(--header-height) * 0.55);
   margin: 0.3rem;
 }
-
+.static-nav{
+  margin-top: -1rem;
+}
 .page {
-  margin-top: calc(var(--header-height) * 0.55);
+  margin-top: calc(var(--header-height));
   display: flex;
 }
 
@@ -290,7 +292,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -327,11 +329,12 @@ footer p {
   display: flex;
   color: #FDBD3E;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   padding: .5rem;
-  white-space: nowrap;
   height: 40px;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 .student-link-button:hover {
   text-decoration: none;
@@ -339,8 +342,9 @@ footer p {
 }
 
 .student-link-button img {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  margin-left: 0.8rem;
 }
 
 
