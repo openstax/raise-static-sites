@@ -14,7 +14,12 @@
   <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
 </head>
 <body>
-  {{ partial "header" . }}
+  {{ if eq .Site.Params.siteRole "teachers" }}
+    {{ partial "header_teacher" . }}
+  {{ else }}
+    {{ partial "header_student" . }}
+  {{ end }}
+
   <div class="page">
     {{ partial "nav" . }}
     <div class="content-wrapper">
