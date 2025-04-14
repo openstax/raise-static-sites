@@ -225,7 +225,7 @@ a.nested {
     top: 0;
     bottom: 0;
     left: -31.25rem;
-    width: 25rem;
+    width: 26rem;
     padding: 1.25rem 1.25rem;
     background: #f8f9fa;
     overflow-y: auto;
@@ -277,7 +277,7 @@ a.nested {
   .static-nav {
     flex: 0 0 auto;
     overflow-y: auto;
-    width: 25rem;
+    width: 26rem;
     padding: 2rem 2rem 0 1rem;
     background-color: #f8f9fa;
   }
