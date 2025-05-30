@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <base href="<%= baseURI %>/">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg" href="/images/favicon.svg">
-  <link rel="stylesheet" href="{{ $cssBundle.RelPermalink }}">
+  <link rel="icon" type="image/svg" href="images/favicon.svg">
+  <link rel="stylesheet" href='{{ strings.TrimPrefix "/" $cssBundle.RelPermalink }}'>
   <link rel="stylesheet" href="https://k12.openstax.org/apps/raise/index.C-se0_9E.css">
-  <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}" defer></script>
+  <script src='{{strings.TrimPrefix "/" $jsBundle.RelPermalink }}' integrity="{{ $jsBundle.Data.Integrity }}" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.7/dist/js/uikit.min.js" defer></script>
   <script type="module" crossorigin src="https://k12.openstax.org/apps/raise/index.BYAT3G2y.js"></script>
   <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
