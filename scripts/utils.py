@@ -9,6 +9,10 @@ def is_correct_type(content_type, toc_item):
     visible = toc_item['visible']
     non_content_lesson_page = toc_item['lesson_page'] != '' and \
         toc_item['lesson_page_type'] != 'content'
+    if toc_item['section'] in ('Research in Practice', 'Appendix'):
+        # Adding this because of a mistake in moodle MBZ.
+        # Alyssa wants Research in Practice and Course Design in TG.
+        return True
 
     if ((visible == '0') and (content_type == STUDENT_CONTENT_TYPE)) or \
        ((visible == '1') and (content_type == TEACHER_CONTENT_TYPE)) or \

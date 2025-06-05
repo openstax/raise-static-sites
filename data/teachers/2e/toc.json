@@ -4747,8 +4747,83 @@
     ]
   },
   {
+    "title": "Research in Practice",
+    "items": [
+      {
+        "title": "Productive Struggle",
+        "items": [
+          {
+            "title": "Productive Failure",
+            "slug": "research-in-practice/productive-failure"
+          }
+        ]
+      },
+      {
+        "title": "Cooperative Learning and Productive Discourse",
+        "items": [
+          {
+            "title": "Classroom Discussion",
+            "slug": "research-in-practice/classroom-discussion"
+          }
+        ]
+      },
+      {
+        "title": "Motivation in the Classroom",
+        "items": [
+          {
+            "title": "Growth Mindset",
+            "slug": "research-in-practice/growth-mindset"
+          },
+          {
+            "title": "Goal Setting ",
+            "slug": "research-in-practice/goal-setting"
+          }
+        ]
+      },
+      {
+        "title": "Metacognition",
+        "items": [
+          {
+            "title": "Spaced Retrieval Practice",
+            "slug": "research-in-practice/spaced-retrieval-practice"
+          }
+        ]
+      },
+      {
+        "title": "Multimedia Learning Principle",
+        "items": [
+          {
+            "title": "Multimedia Principle",
+            "slug": "research-in-practice/multimedia-principle"
+          },
+          {
+            "title": "Generative Learning Principle",
+            "slug": "research-in-practice/generative-learning-principle"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Appendix",
     "items": [
+      {
+        "title": "Course Design",
+        "items": [
+          {
+            "title": "Unit Sequence and Resources",
+            "slug": "appendix/unit-sequence-and-resources"
+          },
+          {
+            "title": "Lesson Structure and Resources",
+            "slug": "appendix/lesson-structure-and-resources"
+          },
+          {
+            "title": "Assessment Types and Resources",
+            "slug": "appendix/assessment-types-and-resources"
+          }
+        ]
+      },
       {
         "title": "Implementing This Course",
         "items": [
