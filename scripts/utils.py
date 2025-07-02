@@ -9,10 +9,21 @@ def is_correct_type(content_type, toc_item):
     visible = toc_item['visible']
     non_content_lesson_page = toc_item['lesson_page'] != '' and \
         toc_item['lesson_page_type'] != 'content'
-    if toc_item['section'] in ('Research in Practice', 'Appendix') or\
-       "Wrap Up" in toc_item['activity_name']:
-        # Adding this because of a mistake in moodle MBZ.
-        # Alyssa wants Research in Practice, Course Design, and wrap ups in TG.
+    if toc_item['section'] in ('Research in Practice',
+                               'Appendix',
+                               ) or\
+       "Wrap Up" in toc_item['activity_name'] or\
+       "Preparing for Success" in toc_item['activity_name']:
+
+        """
+            Adding this because of a mistake in moodle MBZ.
+            Alyssa wants the following sections to be visible in the TG
+              * Research in Practice
+              * Course Design
+              * Preparing for Success
+              * Wrap ups
+        """
+
         return True
     if ((visible == '0') and (content_type == STUDENT_CONTENT_TYPE)) or \
        ((visible == '1') and (content_type == TEACHER_CONTENT_TYPE)) or \

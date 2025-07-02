@@ -106,6 +106,23 @@
             "slug": "supporting-all-learners/resources-and-references"
           }
         ]
+      },
+      {
+        "title": "Preparing for Success",
+        "items": [
+          {
+            "title": "Study Tips",
+            "slug": "supporting-all-learners/study-tips"
+          },
+          {
+            "title": "Creating Your Best Self",
+            "slug": "supporting-all-learners/creating-your-best-self"
+          },
+          {
+            "title": "Building Relationships",
+            "slug": "supporting-all-learners/building-relationships"
+          }
+        ]
       }
     ]
   },
