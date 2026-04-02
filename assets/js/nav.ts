@@ -5,6 +5,12 @@ export const enableNavAccordionLinks = (): void => {
   })
 }
 
+export const fixAccordionRoles = (): void => {
+  document.querySelectorAll<HTMLUListElement>('nav ul.uk-accordion-content').forEach((ul) => {
+    ul.removeAttribute('role')
+  })
+}
+
 export const openActiveNavTree = (): void => {
   const openNavLink = document.querySelector<HTMLElement>('nav .active')
 
