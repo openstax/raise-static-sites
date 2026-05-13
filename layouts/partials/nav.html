@@ -2,7 +2,7 @@
 {{- $contenttype := hugo.Environment -}}
 {{- if index .Site.Data $contenttype $edition "toc" -}}
 <div class="drawer uk-hidden@xl" tabindex="0">
-  <button uk-toggle="target: #offcanvas-nav">
+  <button uk-toggle="target: #offcanvas-nav" aria-label="Open table of contents">
     <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect>
       <rect y="15" width="20" height="2"></rect>
