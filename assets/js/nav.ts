@@ -7,7 +7,7 @@ export const enableNavAccordionLinks = (): void => {
 
 export const fixAccordionRoles = (): void => {
   document.querySelectorAll<HTMLUListElement>('nav ul.uk-accordion-content[role="region"]').forEach((ul) => {
-    ul.removeAttribute('role')
+    ul.setAttribute('role', 'list')
   })
 }
 
