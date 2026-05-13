@@ -11,9 +11,9 @@
 </div>
 
 <nav id="offcanvas-nav" class="static-nav" uk-offcanvas="overlay: true">
-  <div class="uk-offcanvas-bar">
+  <div class="uk-offcanvas-bar" aria-labelledby="toc-heading">
     <button class="uk-offcanvas-close close-button" type="button" uk-close></button>
-    <h2>Table of Contents</h2>
+    <h2 id="toc-heading">Table of Contents</h2>
     <ul uk-accordion class="uk-accordion-start">
       {{- range index .Site.Data $contenttype $edition "toc" -}}
 
